@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ssd-test-web-mongodb-new
+  namespace: restore-test
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: snapshot-mongo-new
+spec:
+  accessModes: [ "ReadWriteOnce" ]
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: snapshot-promoter

@@ -1,0 +1,15 @@
+# Example of snapshot created by snapshot controller
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"volumesnapshot.external-storage.k8s.io/v1","kind":"VolumeSnapshot","metadata":{"annotations":{},"name":"snapshot-mongo","namespace":"ssd-test"},"spec":{"persistentVolumeClaimName":"ssd-test-web-mongodb"}}
+  labels:
+    SnapshotMetadata-PVName: pvc-e214186f-f255-11e8-93fa-42010a9600c3
+    SnapshotMetadata-Timestamp: "1543333969592618604"
+  name: snapshot-mongo-new
+  namespace: restore-test
+spec:
+  persistentVolumeClaimName: ssd-test-web-mongodb
+  snapshotDataName: k8s-volume-snapshot-7e47943b-f25c-11e8-a9cc-0a580a2c0925

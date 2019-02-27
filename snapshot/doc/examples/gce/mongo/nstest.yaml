@@ -1,0 +1,8 @@
+
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: snapshot-mongo-new
+  namespace: restore-test
+spec:
+  snapshotDataName: k8s-volume-snapshot-7e47943b-f25c-11e8-a9cc-0a580a2c0925

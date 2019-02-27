@@ -1,0 +1,6 @@
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: snapshot-mongo-new
+spec:
+  persistentVolumeClaimName: ssd-test-web-mongodb
